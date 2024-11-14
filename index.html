@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+    <div class="container">
+        <a href="https://www.linkedin.com/in/d%C3%ADaz-d/" target="_blank" rel="noopener noreferrer" class="company-logo">Diaz.Jsx</a>
+        <h1>Generador de Contraseñas</h1>
+        <div class="password-display" id="passwordDisplay"></div>
+        <div class="controls">
+            <div class="length-control">
+                <div class="length-label">
+                    <span>Longitud</span>
+                    <span id="lengthValue">12</span>
+                </div>
+                <input type="range" min="4" max="32" value="12" id="lengthSlider">
+            </div>
+            <div class="toggle-control">
+                <span>Mayúsculas</span>
+                <label class="toggle">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-control">
+                <span>Minúsculas</span>
+                <label class="toggle">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-control">
+                <span>Números</span>
+                <label class="toggle">
+                    <input type="checkbox" id="numbers" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-control">
+                <span>Símbolos</span>
+                <label class="toggle">
+                    <input type="checkbox" id="symbols" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="custom-words-control">
+                <label for="customWords">Palabras claves:</label>
+                <input type="text" id="customWords" placeholder="">
+            </div>
+        </div>
+        <button id="generateBtn">Generar Contraseña</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
